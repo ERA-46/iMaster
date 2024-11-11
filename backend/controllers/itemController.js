@@ -38,7 +38,7 @@ const createItem = async(req, res) => {
     const {name , description, price, quantity, category} = req.body;
 
     try{
-        const imageUrl = req.file? '../uploads/${req.file.filename}' : null
+        const imageUrl = req.file? `/uploads/${req.file.filename}` : null
         const item = new Item({
             name, 
             description, 
@@ -104,7 +104,7 @@ const updateItem = async(req, res) => {
         item.category = category || item.category;
 
         if(req.file){
-            item.image = '../uploads/${req.file.filename}';
+            item.image = `/uploads/${req.file.filename}`;
         }
         
         await item.save();
