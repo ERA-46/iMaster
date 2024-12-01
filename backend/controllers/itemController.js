@@ -51,7 +51,7 @@ const createItem = async(req, res) => {
         res.status(200).json({mssg: 'Item added successfully', item: item});
 
     }catch(error){
-        res.status(500).json({mssg: 'Error creating item', error});
+        res.status(500).json({mssg: 'Error creating item', error: error.message});
 
     }
 };
