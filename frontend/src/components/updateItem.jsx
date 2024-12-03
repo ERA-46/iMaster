@@ -75,7 +75,7 @@ const UpdateItem = () => {
                         required
                     />
                 </div>
-                <button className="btn btn-primary mt-3">Add Item</button>
+                <button className="btn btn-primary mt-3">Update {name}</button>
                 
             </form>
         </div>
