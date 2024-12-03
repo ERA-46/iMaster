@@ -1,0 +1,22 @@
+.job-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px 0;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.form-check {
+    margin-right: 10px;
+}
+
+.button-group button {
+    margin-left: 8px;
+    width: 200px;
+}

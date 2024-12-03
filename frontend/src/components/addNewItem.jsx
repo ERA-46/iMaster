@@ -49,7 +49,7 @@ const AddNewItem = () => {
             <h1 className="mb-4">Add New Item</h1>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                    <label htmlFor="name" className="form-label">Item Name</label>
+                    <label htmlFor="name" className="form-label">Name</label>
                     <input
                         type="text"
                         className="form-control"
