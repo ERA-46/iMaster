@@ -1,0 +1,165 @@
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar */
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar .navbar-header .navbar-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar .navbar-nav li a {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 15px 20px;
+  }
+  
+  .navbar .navbar-nav li a:hover {
+    background-color: #575757;
+  }
+  
+  .navbar .navbar-nav .active a {
+    background-color: #007bff;
+  }
+  
+  .navbar .navbar-nav .navbar-right li a {
+    font-size: 18px;
+  }
+  
+  /* Main content area */
+  .container-fluid.text-center {
+    padding: 30px 50px;
+  }
+  
+  .row.content {
+    margin-top: 30px;
+  }
+  
+  /* Sidenav */
+  .sidenav {
+    padding-top: 30px;
+    background-color: #f8f9fa;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    border-right: 2px solid #ddd;
+  }
+  
+  .sidenav a {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 15px;
+  }
+  
+  .sidenav a:hover {
+    text-decoration: underline;
+  }
+  
+  .sidenav-links p {
+    margin-bottom: 20px;
+  }
+  
+  /* Main content */
+  .main-content {
+    padding: 20px;
+  }
+  
+  .main-content h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .main-content p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+  }
+  
+  .main-content hr {
+    border: 1px solid #007bff;
+    margin: 20px 0;
+  }
+  
+  .main-content h3 {
+    font-size: 28px;
+    color: #007bff;
+    margin-top: 30px;
+  }
+  
+  /* Ads Section */
+  .ads .well {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .ads .well p {
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    
+    .row.content {
+      height: auto;
+    }
+  
+    .navbar .navbar-toggle {
+      display: block;
+    }
+  
+    .navbar .navbar-collapse {
+      background-color: #333;
+    }
+  
+    .navbar .navbar-nav li a {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .col-sm-2.sidenav,
+    .col-sm-2.ads {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .main-content {
+      width: 100%;
+    }
+  }
+  

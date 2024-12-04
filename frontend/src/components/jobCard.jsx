@@ -23,11 +23,6 @@ const JobCard = ({job, onToggleStatus, handleDelete, handleUpdate}) => {
                     {job.status === "Pending" ? "Pending" : "Done"} {/* Update text dynamically */}
                 </label>
             </div>
-
-            <div className="button-group">
-                <button className="btn btn-primary" onClick={() => handleUpdate(job)}>Update</button>
-                <button className="btn btn-danger" onClick={() => handleDelete(job._id)}>Delete</button>
-            </div>
         </div>
     );
 }

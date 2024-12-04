@@ -106,8 +106,7 @@ const AddNewJob = () => {
                     required
                 />
             </div>
-            <button className="btn btn-primary mt-3">Add Job</button>
-            
+            <button className="btn btn-primary mt-3">Add Job</button>         
         </form>
         </div>
     );
