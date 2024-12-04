@@ -1,19 +1,14 @@
 const Item = require('../models/items');
 const mongoose = require('mongoose');
 
-//get all items
 const getAllItems = async(req, res) => {
     const items = await Item.find({}).sort({createdAt: -1});
     res.status(200).json({items});
 };
 
-
-//get a single item
 const getItem = async(req, res) => {
-
     try{
-        const { id } = req.params;
-        
+        const { id } = req.params;      
         if(!mongoose.Types.ObjectId.isValid(id)){
             return res.status(404).json({mssg: 'Invalid Mongo id'});
         }
@@ -22,8 +17,7 @@ const getItem = async(req, res) => {
     
         if(!item){
             return res.status(404).json({mssg: 'Item not found'});
-        }
-    
+        }   
         res.status(200).json({item});
 
     }catch(error){
@@ -31,12 +25,9 @@ const getItem = async(req, res) => {
     } 
 };
 
-
-//create a new item
 const createItem = async(req, res) => {
 
     const {name , description, price, quantity, category} = req.body;
-
     try{
         const imageUrl = req.file? `/uploads/${req.file.filename}` : null
         const item = new Item({
@@ -56,11 +47,10 @@ const createItem = async(req, res) => {
     }
 };
 
-//delete a single item
 const deleteItem = async(req, res) => {
     try{
-        const { id } = req.params;
-        
+        const { id } = req.params; 
+
         if(!mongoose.Types.ObjectId.isValid(id)){
             return res.status(404).json({mssg: 'Invalid Mongo id'});
         }
@@ -78,8 +68,6 @@ const deleteItem = async(req, res) => {
     }
 };
 
-
-//update a single item
 
 const updateItem = async(req, res) => {
     const { id } = req.params;

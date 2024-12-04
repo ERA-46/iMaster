@@ -10,7 +10,7 @@ const ItemCard = ({item, handleUpdate, handleDelete}) => {
             />
             <div className="item-details flex-grow-1">
                 <h3>{item.name}</h3>
-                <p><strong>Price:</strong> ${item.price}</p>
+                <p><strong>Price:</strong> Rs.{item.price}</p>
                 <p><strong>Stock:</strong> {item.quantity}</p>
             </div>
             <div className="item-actions text-center">

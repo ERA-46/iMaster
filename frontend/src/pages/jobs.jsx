@@ -61,7 +61,7 @@ const Jobs = () => {
     return (
         <div className="container mt-4">
             <div className="item-actions text-center mt-5 mb-5">
-                <button className="btn btn-info" onClick={handleAddNewItem}>Add Item</button>
+                <button className="btn btn-info" onClick={handleAddNewItem}>Add a Job</button>
             </div>
             <div className="row">
             {jobs && jobs.map((job) => <JobCard key={job._id} job={job} onToggleStatus={onToggleStatus}/>)}

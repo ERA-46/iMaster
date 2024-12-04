@@ -11,16 +11,13 @@ const UpdateItem = () => {
     const [quantity, setQuantity] = useState('');
   
 
-    // Handle missing state
     useEffect(() => {
         if (state?.item) {
-            // If item data is passed in state, populate the form
             const { name, price, quantity } = state.item;
             setName(name);
             setPrice(price);
             setQuantity(quantity);
         } else {
-            // Fetch item details from backend if state is not available
             fetch(`/api/items/${itemId}`)
                 .then((res) => res.json())
                 .then((data) => {
@@ -32,7 +29,6 @@ const UpdateItem = () => {
         }
     }, [state, itemId]);
 
-    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -45,7 +41,7 @@ const UpdateItem = () => {
 
         if (response.ok) {
             alert('Item updated successfully!');
-            navigate('/items'); // Redirect to items page
+            navigate('/items');
         } else {
             alert('Failed to update item.');
         }
@@ -81,6 +77,5 @@ const UpdateItem = () => {
         </div>
     );
 };
-
 
 export default UpdateItem;

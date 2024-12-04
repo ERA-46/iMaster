@@ -10,8 +10,7 @@ const AddNewItem = () => {
     const[error, setError] = useState('');
 
     const navigate = useNavigate();
-
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
     
@@ -20,11 +19,11 @@ const AddNewItem = () => {
         formData.append('price', price);
         formData.append('description', description);
         formData.append('quantity', stock);
-        formData.append('image', image); // Assuming `image` is a file object
+        formData.append('image', image);
     
         const response = await fetch('/api/items', {
             method: 'POST',
-            body: formData, // No need to set `Content-Type` for FormData; it's handled automatically
+            body: formData,
         });
     
         const json = await response.json();

@@ -6,6 +6,7 @@ import NewItem from './components/addNewItem';
 import UpdateItem from './components/updateItem';
 import Jobs from './pages/jobs';
 import NewJob from './components/addNewJob';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -20,12 +21,9 @@ function App() {
           <Route path='/items/:itemId/update-item' element={<UpdateItem/>}/>
           <Route path='/jobs' element={<Jobs/>}/>
           <Route path='/jobs/add-new-job' element={<NewJob/>}/>
-
-
         </Routes>
       </div>
-
-
+      <Footer/>
       </BrowserRouter>      
     </div>
   );
